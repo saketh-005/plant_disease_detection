@@ -98,7 +98,7 @@ def load_class_indices():
 def load_model():
     class_indices = load_class_indices()
     model = ResNet9(3, len(class_indices))
-    model.load_state_dict(torch.load('plant_disease_resnet9.pth', map_location=torch.device('cpu')))
+    model.load_state_dict(torch.load('plant_disease_model.pth', map_location=torch.device('cpu')))
     model.eval()
     return model
 
