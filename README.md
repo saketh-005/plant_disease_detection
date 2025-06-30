@@ -22,8 +22,8 @@ A deep learning-based web application that identifies plant diseases from leaf i
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/plant-disease-detection.git
-   cd plant-disease-detection
+   git clone https://github.com/saketh-005/plant_disease_detection.git
+   cd plant_disease_detection
    ```
 
 2. Create and activate a virtual environment (recommended):
