@@ -2,7 +2,8 @@ title: Plant Disease Detection
 emoji: 🌿
 colorFrom: green
 colorTo: blue
-sdk: docker-streamlit
+sdk: docker
+app_port: 7860
 app_file: app_resnet9.py
 pinned: false
 license: mit
