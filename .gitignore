@@ -1,6 +1,5 @@
 # Dataset and large files
 dataset/
-kaggle_plant_disease/
 *.pth
 *.pth.*
 *.h5
@@ -179,8 +178,13 @@ train_torch.py
 train_mac.py
 training_history.png
 
-# Large model files - use Git LFS
+# Model files
+# Note: We're including plant_disease_model.pth specifically
+!plant_disease_model.pth
+
+# Other model files (exclude all other .pth files)
 *.pth
+*.pth.*
 *.bin
 *.h5
 *.hdf5
@@ -193,6 +197,5 @@ training_history.png
 *.pb
 *.tfl
 *.lite
-*.tflite
 *.tflite.*
 *.tflite_metadata.json
