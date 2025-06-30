@@ -50,13 +50,38 @@ A deep learning-based web application that identifies plant diseases from leaf i
 
 5. Open your browser and navigate to `http://localhost:8501`
 
+## 🌱 Dataset
+
+The PlantVillage dataset is available on Hugging Face Hub. You can download it using the provided script:
+
+```bash
+python download_dataset.py
+```
+
+This will download the dataset to the `dataset/` directory.
+
+### Dataset Structure
+
+```
+dataset/
+├── train/
+│   ├── Apple___Apple_scab
+│   ├── Apple___Black_rot
+│   └── ... (38 classes)
+└── valid/
+    ├── Apple___Apple_scab
+    ├── Apple___Black_rot
+    └── ... (38 classes)
+```
+
 ## 🧠 Training Your Own Model
 
 The `kaggle_plant_disease` directory contains everything you need to train your own plant disease classification model.
 
 ### Prerequisites for Training
-- Kaggle account (for GPU access)
-- PlantVillage dataset (or your own dataset)
+- Python 3.8+
+- PyTorch
+- Hugging Face Hub (for dataset download)
 - Basic knowledge of PyTorch
 
 ### Training on Kaggle (Recommended)
