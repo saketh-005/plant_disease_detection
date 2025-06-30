@@ -1,3 +1,11 @@
+# Track model files with LFS
 *.pth filter=lfs diff=lfs merge=lfs -text
 plant_disease_model.pth filter=lfs diff=lfs merge=lfs -text
+
+# Track dataset images with LFS
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.JPG filter=lfs diff=lfs merge=lfs -text
+dataset/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+dataset/**/*.JPG filter=lfs diff=lfs merge=lfs -text
+
 examples/*.jpg filter=lfs diff=lfs merge=lfs -text
