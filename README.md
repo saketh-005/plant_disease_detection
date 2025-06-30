@@ -74,4 +74,6 @@ This is a demonstration application. For production use, please consult with agr
 
 ## 📄 License
 
+Copyright © 2025 [Saketh Jangala](https://github.com/saketh-005)
+
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
