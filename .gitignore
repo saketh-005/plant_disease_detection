@@ -1,6 +1,12 @@
 # Dataset and large files
 dataset/
 kaggle_plant_disease/
+*.pth
+*.pth.*
+*.h5
+*.hdf5
+*.pkl
+*.pkl.*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -47,6 +53,40 @@ coverage.xml
 *.cover
 .hypothesis/
 .pytest_cache/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project specific
+plant_disease_model.pth
+venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
 
 # Virtual environment
 venv/
