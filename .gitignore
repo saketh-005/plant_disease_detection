@@ -1,3 +1,7 @@
+# Dataset and large files
+dataset/
+kaggle_plant_disease/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -44,9 +48,35 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 
-# Translations
-*.mo
-*.pot
+# Virtual environment
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Local development
+.env
+*.pth
+*.pth.*
+
+# Training scripts and logs
+resnet9_train.py
+test_model.py
+
+# Test images
+test_image.JPG
 
 # Django stuff:
 *.log

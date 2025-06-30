@@ -1,0 +1,10 @@
+title: Plant Disease Detection
+emoji: 🌿
+colorFrom: green
+colorTo: blue
+sdk: docker
+app_file: app_resnet9.py
+app_port: 8501
+pinned: false
+duplicate: false
+license: mit

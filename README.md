@@ -11,11 +11,11 @@ pinned: false
 
 # 🌿 Plant Disease Detection
 
-A deep learning-based web application that identifies plant diseases from leaf images using EfficientNetB0.
+A deep learning-based web application that identifies plant diseases from leaf images using a ResNet9 model, providing fast and accurate predictions.
 
 ## 🚀 Features
 
-- 🌱 Identify 38 different plant diseases
+- 🌱 Identify 38 different plant diseases using a ResNet9 model
 - 📊 Interactive prediction visualization
 - 📱 Mobile-responsive design
 - ⚡ Fast inference with model caching
@@ -26,7 +26,7 @@ A deep learning-based web application that identifies plant diseases from leaf i
 
 1. Clone the repository:
    ```bash
-   git clone https://huggingface.co/spaces/your-username/plant-disease-detection
+   git clone https://huggingface.co/spaces/saketh-005/plant-disease-detection
    cd plant-disease-detection
    ```
 
@@ -42,7 +42,7 @@ A deep learning-based web application that identifies plant diseases from leaf i
 
 ## 🌐 Deployment
 
-This app is deployed on Hugging Face Spaces. You can access it [here](https://huggingface.co/spaces/your-username/plant-disease-detection).
+This app is deployed on Hugging Face Spaces. You can access it [here](https://huggingface.co/spaces/saketh-005/plant-disease-detection).
 
 ## 📝 Note
 

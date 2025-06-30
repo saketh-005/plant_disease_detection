@@ -23,5 +23,5 @@ ENV MPLCONFIGDIR=/tmp/matplotlib
 RUN mkdir -p /tmp/matplotlib && \
     chmod -R 777 /tmp/matplotlib
 
-# Run app.py when the container launches
-CMD ["streamlit", "run", "app.py", "--server.port=7860", "--server.address=0.0.0.0"]
+# Run app_resnet9.py when the container launches
+CMD ["streamlit", "run", "app_resnet9.py", "--server.port=8501", "--server.address=0.0.0.0"]
