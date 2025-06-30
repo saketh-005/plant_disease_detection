@@ -23,6 +23,6 @@ ENV MPLCONFIGDIR=/tmp/matplotlib
 RUN mkdir -p /tmp/matplotlib && \
     chmod -R 777 /tmp/matplotlib
 
-# Run app_resnet9.py when the container launches
+# Run app.py when the container launches
 # Note: Using port 7860 as it's the standard port for Hugging Face Spaces
-CMD ["streamlit", "run", "app_resnet9.py", "--server.port=7860", "--server.address=0.0.0.0", "--server.enableCORS=false", "--server.enableXsrfProtection=false"]
+CMD ["streamlit", "run", "app.py", "--server.port=7860", "--server.address=0.0.0.0", "--server.enableCORS=false", "--server.enableXsrfProtection=false"]

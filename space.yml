@@ -4,6 +4,6 @@ colorFrom: green
 colorTo: blue
 sdk: docker
 app_port: 7860
-app_file: app_resnet9.py
+app_file: app.py
 pinned: false
 license: mit
