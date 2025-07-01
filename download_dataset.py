@@ -22,7 +22,7 @@ def download_file(url, filename):
                 print(f"\rProgress: {downloaded//(1024*1024)}MB/{total_size//(1024*1024)}MB ({percent}%)", end='')
         print()  # New line after progress
 
-def download_dataset(save_dir="dataset"):
+def download_dataset(save_dir="plant_disease_dataset"):
     """
     Download and extract the plant disease dataset from the provided URL
     """
