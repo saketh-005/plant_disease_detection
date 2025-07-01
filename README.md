@@ -58,7 +58,22 @@ The PlantVillage dataset is available on Hugging Face Hub. You can download it u
 python download_dataset.py
 ```
 
-This will download the dataset to the `dataset/` directory.
+This will download the dataset to the `plant_disease_dataset/` directory.
+
+### Preparing Dataset for Kaggle
+
+To prepare the dataset for uploading to Kaggle, use the `zip_dataset.py` script:
+
+```bash
+python zip_dataset.py
+```
+
+This will:
+1. Clean up filenames (remove trailing spaces and handle 'copy' in filenames)
+2. Create a zip archive named `plant_disease_dataset.zip`
+3. The resulting zip file can be directly uploaded to Kaggle as a dataset
+
+For Kaggle, upload the zip file and name your dataset (e.g., 'plant-disease-dataset'). The training script is already configured to look for the dataset at `/kaggle/input/plant-disease-dataset/plant_disease_dataset`.
 
 ### Dataset Structure
 
