@@ -38,16 +38,42 @@ def download_dataset(save_dir="dataset"):
         print("\nExtracting dataset...")
         with tarfile.open(archive_path, "r:gz") as tar:
             # Get the root directory name
-            root_dir = tar.getnames()[0].split('/')[0] if tar.getnames() else ''
-            # Extract all files
-            tar.extractall(path=save_dir)
+            members = []
+            for member in tar.getmembers():
+                # Skip macOS resource fork files (._*) and other special files
+                if not any(part.startswith('._') for part in member.name.split('/')):
+                    # Ensure the target path is within the destination directory for security
+                    member_path = os.path.join(save_dir, member.name)
+                    if not os.path.abspath(member_path).startswith(os.path.abspath(save_dir)):
+                        continue
+                    members.append(member)
             
-        # Move files from the subdirectory if needed
-        extracted_dir = os.path.join(save_dir, root_dir) if root_dir else save_dir
-        if os.path.exists(extracted_dir) and extracted_dir != save_dir:
-            for item in os.listdir(extracted_dir):
-                shutil.move(os.path.join(extracted_dir, item), save_dir)
-            os.rmdir(extracted_dir)
+            # Extract only the filtered members
+            if members:
+                tar.extractall(path=save_dir, members=members, filter='data')
+                
+                # Find the root directory of the extracted files
+                root_dirs = set()
+                for member in members:
+                    first_part = member.name.split('/')[0]
+                    if first_part and first_part != '.':
+                        root_dirs.add(first_part)
+                
+                # If there's a single root directory, move its contents up
+                if len(root_dirs) == 1:
+                    root_dir = root_dirs.pop()
+                    extracted_dir = os.path.join(save_dir, root_dir)
+                    if os.path.exists(extracted_dir) and os.path.isdir(extracted_dir):
+                        for item in os.listdir(extracted_dir):
+                            src = os.path.join(extracted_dir, item)
+                            dst = os.path.join(save_dir, item)
+                            if os.path.exists(dst):
+                                if os.path.isdir(dst):
+                                    shutil.rmtree(dst)
+                                else:
+                                    os.remove(dst)
+                            shutil.move(src, save_dir)
+                        os.rmdir(extracted_dir)
             
         # Remove the archive
         os.remove(archive_path)
